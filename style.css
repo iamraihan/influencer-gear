@@ -9,6 +9,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    /* overflow-y: hidden; */
 }
 nav h3{
     font-size: 24px;
@@ -66,9 +67,19 @@ transform: scale(1.5);
     justify-content: center;
     align-items: flex-end;
     width: 440px;
+    animation: spin  10s linear infinite;
+    /* transition: .5s ease-in-out; */
+}
+
+@keyframes spin {
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
 }
 /* products style  */
-.product-section h2{
+.product-header{
     font-size: 28px;
     text-align: center;
     margin-bottom: 30px;
@@ -126,7 +137,16 @@ transform: scale(1.5);
     letter-spacing: 0.018em;
     color: #787885;
 }
-
+.see-more{
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 20px;
+}
+.see-more a{
+    text-decoration: none;
+    color: #E02C6D;
+    font-size: 16px;
+}
 /* footer */
 footer{
     display: flex;
@@ -149,3 +169,80 @@ footer p{
     color: #fff;
     font-size: 22px;
 }
+/* Feature product  */
+.feture-products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content:center;
+    align-items: flex-end;
+    justify-items: center;
+}
+.top-products h2, .new-arrival h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36x;
+}
+.top-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    height: 450px;
+}
+.new-arrival{
+    height: 513px;
+}
+
+.new-arrival-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.top-img img{
+    width: 100%;
+}
+.new-img img{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+.discount{
+    display: flex;
+}
+.regular-price{
+    text-decoration: line-through;
+    margin-right: 20px;
+}
+.discount-price{
+ color: #E02C6D;
+}
+.buy-now-btn{
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    background: #E02C6D;
+    border-radius: 41px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.top-product, .new-arrival-product{
+    background-color: #ffffff;
+color: #000000;
+margin: 0 auto;
+padding: 10px;
+text-align: left;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+.new-arrival-product{
+    margin-top: 20px;
+}
+.new-arrival-product .discount{
+    text-align: center;
+    justify-content: center;
+}
+
+/* media resoponsive website start  */
