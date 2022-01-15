@@ -285,10 +285,13 @@ footer p{
     .feture-products{
         grid-template-columns: repeat(1, 1fr);
     }
+    html,body{
+        overflow-x: hidden;
+    }
 }
 
 /* Tablet view  */
-@media (min-width:668px) and (max-width:992px) {
+@media (min-width:669px) and (max-width:992px) {
     .banner{
         flex-direction: column;
     }
@@ -309,5 +312,8 @@ footer p{
     }
     .products{
         grid-template-columns: repeat(2, 1fr);
+    }
+    html,body{
+        overflow-x: hidden;
     }
 }
